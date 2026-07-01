@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* defilement */
+.marquee-container {
+    background: #1e2a3a;
+    color: white;
+    padding: 15px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.marquee-text {
+    display: inline-block;
+    animation: defilement 12s linear infinite;
+}
+
+@keyframes defilement {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Les Boutons de la page principame */
+.btn-group {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-action {
+    width: 200px;
+    height: 80px;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background: #2c3e50;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-action:hover {
+        transform: scale(1.05);
+        background: #1a2a3a;
+}
+
+.btn-action.analyse {
+    background: #2980b9;
+}
+
+.btn-action.analyse:hover {
+    background: #1f618d;
+}
+
+.image-gallery {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 200px;
+    border: 2px dashed #bdc3c7;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 15px;
+    background: white;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.image-gallery img {
+    height: 180px;
+    width: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    border: 3px solid transparent;
+}
+
+.image-gallery img:hover {
+    border-color: #2980b9;
+    transform: scale(1.03);
+}
+
+.error-message {
+    display: none;
+    color: red;
+    font-size: 28px;
+    font-weight: bold;
+    animation: clignote 0.8s step-end infinite;
+    padding: 20px;
+}
+
+@keyframes clignote {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.text-zone {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    background: #ecf0f1;
+    border-radius: 10px;
+    border-left: 6px solid #2980b9;
+    font-size: 18px;
+}
+
+.text-zone.active {
+    display: block;
+}

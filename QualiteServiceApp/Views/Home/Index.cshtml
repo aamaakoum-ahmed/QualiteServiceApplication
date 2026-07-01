@@ -1,0 +1,44 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contrôle Qualité - Service Tech</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+
+    <!-- BANDEAU DÉFILANT -->
+    <div class="marquee-container">
+        <span class="marquee-text">Contrôle Qualité - Service Tech</span>
+    </div>
+
+    <!-- CONTENU PRINCIPAL -->
+    <div class="main-content">
+
+        <!-- Groupe de 3 boutons -->
+        <div class="btn-group">
+            <button class="btn-action analyse" id="btnAnalyse">🔍 Analyse</button>
+            <button class="btn-action" id="btnOpt02">Opt02</button>
+            <button class="btn-action" id="btnOpt03">Opt03</button>
+        </div>
+
+        <!-- Galerie -->
+        <div class="image-gallery" id="gallery">
+            <div class="error-message" id="errorMsg">⚠️ Aucune photo détectée</div>
+        </div>
+
+        <!-- Zone de texte -->
+        <div class="text-zone" id="textZone">
+            Texte associé à l'image (contenu défini ultérieurement)
+        </div>
+    </div>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+</body>
+</html>
