@@ -8,6 +8,9 @@
 
   <ItemGroup>
     <Folder Include="Models\" />
+    <Folder Include="Docs\" />
+    <Folder Include="PythonService\scripts\" />
+    <Folder Include="PythonService\notebooks\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
